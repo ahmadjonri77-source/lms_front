@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
-/* Deploy'da (masalan Vercel'da) API_ORIGIN env o'zgaruvchisiga backend'ning
-   ochiq URL'i beriladi; berilmasa lokal backend ishlatiladi. */
-const API_ORIGIN = process.env.API_ORIGIN ?? "http://localhost:3000";
+/* API_ORIGIN env o'zgaruvchisi berilsa o'sha ishlatiladi (masalan lokal
+   backend uchun .env.local'da), berilmasa deploy qilingan backend. */
+const API_ORIGIN = process.env.API_ORIGIN ?? "http://3.126.43.130:4000";
 
 const nextConfig: NextConfig = {
   experimental: {
