@@ -40,7 +40,7 @@ const NO_API: Record<Tab, string> = {
 /* rasm o'z kengaytmasi bilan, video esa .mp4 nomi bilan saqlanadi */
 function homeworkFileUrl(file: string) {
   return file.toLowerCase().endsWith(".mp4")
-    ? `/uploads/temp/${file}`
+    ? `/uploads/videos/${file}`
     : `/uploads/images/${file}`;
 }
 
